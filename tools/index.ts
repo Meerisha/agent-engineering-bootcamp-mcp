@@ -1,4 +1,3 @@
-export { echoTool } from "./echo";
-export { getBootcampProjectSetupGuide } from "./agent-bootcamp";
-export { bootcampScheduleTool } from "./bootcamp-schedule";
-export { joinBootcampTool } from "./join-bootcamp";
+export { projectIntakeTool } from "./project-intake";
+export { launchStrategyTool } from "./launch-strategy";
+export { revenueCalculatorTool } from "./revenue-calculator";

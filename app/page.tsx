@@ -1,188 +1,202 @@
-export default function HomePage() {
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'LaunchPilot - AI Launch Consultant',
+  description: 'Transform your raw idea into a revenue-generating product or course with AI-powered launch consulting.',
+}
+
+export default function LaunchPilotHomePage() {
   return (
-    <html lang="en">
-      <head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Agent Engineering Bootcamp MCP</title>
-        <meta
-          name="description"
-          content="Model Context Protocol server providing bootcamp resources and serving as an MCP template example."
-        />
-        <style
-          dangerouslySetInnerHTML={{
-            __html: `
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-
-            body {
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-                line-height: 1.6;
-                color: #333;
-                background: #fafafa;
-                min-height: 100vh;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 40px 20px;
-            }
-
-            .container {
-                max-width: 500px;
-                width: 100%;
-                text-align: center;
-            }
-
-            .header {
-                margin-bottom: 48px;
-            }
-
-            h1 {
-                font-size: 2rem;
-                font-weight: 600;
-                margin-bottom: 8px;
-                color: #000;
-            }
-
-            .subtitle {
-                font-size: 1rem;
-                color: #666;
-                font-weight: 400;
-            }
-
-            .description {
-                font-size: 1rem;
-                color: #555;
-                margin-bottom: 40px;
-                line-height: 1.6;
-                max-width: 400px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .buttons {
-                display: flex;
-                flex-direction: column;
-                gap: 16px;
-                align-items: center;
-                margin-bottom: 48px;
-            }
-
-            .cursor-btn {
-                display: inline-block;
-            }
-
-            .github-btn {
-                display: inline-flex;
-                align-items: center;
-                gap: 8px;
-                padding: 10px 16px;
-                border: 1px solid #d1d5db;
-                border-radius: 6px;
-                text-decoration: none;
-                color: #374151;
-                font-size: 0.875rem;
-                font-weight: 500;
-                background: white;
-                transition: all 0.2s ease;
-            }
-
-            .github-btn:hover {
-                background: #f9fafb;
-                border-color: #9ca3af;
-            }
-
-            .github-icon {
-                width: 16px;
-                height: 16px;
-            }
-
-            .info {
-                font-size: 0.875rem;
-                color: #6b7280;
-                line-height: 1.5;
-                border-top: 1px solid #e5e7eb;
-                padding-top: 24px;
-            }
-
-            .info code {
-                background: #f3f4f6;
-                padding: 2px 6px;
-                border-radius: 3px;
-                font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
-                font-size: 0.8rem;
-            }
-
-            @media (max-width: 480px) {
-                h1 {
-                    font-size: 1.75rem;
-                }
-                
-                .container {
-                    padding: 0 16px;
-                }
-            }
-          `,
-          }}
-        />
-      </head>
-      <body>
-        <div className="container">
-          <div className="header">
-            <h1>Agent Engineering Bootcamp MCP</h1>
-            <p className="subtitle">Bootcamp Resources & MCP Template</p>
-          </div>
-
-          <p className="description">
-            Get step-by-step setup instructions for the Agent Engineering
-            Bootcamp. This server provides bootcamp resources and serves as a
-            simple example of how to build an MCP server using Next.js.
-          </p>
-
-          <div className="buttons">
-            <a
-              href="https://cursor.com/install-mcp?name=agent-bootcamp&config=eyJ1cmwiOiJodHRwczovL2FnZW50LWVuZ2luZWVyaW5nLWJvb3RjYW1wLW1jcC52ZXJjZWwuYXBwL3NzZSJ9"
-              className="cursor-btn"
-            >
-              <img
-                src="https://cursor.com/deeplink/mcp-install-dark.svg"
-                alt="Add agent-bootcamp MCP server to Cursor"
-                height="32"
-              />
-            </a>
-
-            <a
-              href="https://github.com/trancethehuman/agent-engineering-bootcamp-mcp"
-              className="github-btn"
-            >
-              <svg
-                className="github-icon"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              View Source
-            </a>
-          </div>
-
-          <div className="info">
-            <p>
-              Protocol endpoint: <code>/mcp</code>
-              <br />
-              Use this as a template for building your own MCP servers.
+    <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center p-5">
+      <div className="max-w-4xl w-full bg-white/95 backdrop-blur-lg rounded-3xl shadow-2xl overflow-hidden">
+        {/* Hero Section */}
+        <div className="bg-gradient-to-r from-pink-400 to-rose-400 text-white p-12 text-center relative overflow-hidden">
+          <div className="relative z-10">
+            <div className="text-5xl font-black mb-4">🚀 LaunchPilot</div>
+            <p className="text-xl font-medium mb-3 opacity-95">AI Launch Consultant</p>
+            <p className="text-base opacity-80 max-w-2xl mx-auto">
+              Transform your raw idea into a revenue-generating product or course with intelligent, data-driven guidance
             </p>
           </div>
+          <div className="absolute inset-0 bg-white/5 opacity-20"></div>
         </div>
-      </body>
-    </html>
-  );
+
+        {/* Features Section */}
+        <div className="p-12">
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <span className="text-5xl mb-5 block">🎯</span>
+              <h3 className="text-xl font-semibold mb-3 text-gray-800">Project Analysis</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Comprehensive intake analysis with market viability assessment, resource evaluation, and risk factor identification
+              </p>
+            </div>
+
+            <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <span className="text-5xl mb-5 block">📊</span>
+              <h3 className="text-xl font-semibold mb-3 text-gray-800">Revenue Forecasting</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Detailed financial projections, break-even analysis, and scenario planning to maximize your launch success
+              </p>
+            </div>
+
+            <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-green-50 to-emerald-50 border border-green-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <span className="text-5xl mb-5 block">🗺️</span>
+              <h3 className="text-xl font-semibold mb-3 text-gray-800">Launch Strategy</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Customized go-to-market strategy with timeline, budget allocation, and channel prioritization
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white p-10 text-center">
+          <h2 className="text-3xl font-bold mb-4">Ready to Launch Your Idea?</h2>
+          <p className="text-lg mb-8 opacity-90">
+            Get your personalized launch strategy in minutes
+          </p>
+
+          <div className="max-w-lg mx-auto bg-white/95 rounded-2xl p-8 text-gray-800 text-left">
+            <form onSubmit={(e) => e.preventDefault()}>
+              <div className="mb-5">
+                <label htmlFor="projectName" className="block text-sm font-semibold text-gray-700 mb-2">
+                  Project Name
+                </label>
+                <input
+                  type="text"
+                  id="projectName"
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-indigo-500 focus:outline-none transition-colors"
+                  placeholder="e.g., Zero-to-Launch Bootcamp"
+                  required
+                />
+              </div>
+
+              <div className="mb-5">
+                <label htmlFor="elevatorPitch" className="block text-sm font-semibold text-gray-700 mb-2">
+                  Elevator Pitch (≤ 300 characters)
+                </label>
+                <textarea
+                  id="elevatorPitch"
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-indigo-500 focus:outline-none transition-colors resize-none h-24"
+                  placeholder="Describe your project in 50 words or less..."
+                  maxLength={300}
+                  required
+                ></textarea>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-4 mb-5">
+                <div>
+                  <label htmlFor="targetAudience" className="block text-sm font-semibold text-gray-700 mb-2">
+                    Target Audience
+                  </label>
+                  <input
+                    type="text"
+                    id="targetAudience"
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-indigo-500 focus:outline-none transition-colors"
+                    placeholder="e.g., Solo entrepreneurs, 25-45"
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="launchGoal" className="block text-sm font-semibold text-gray-700 mb-2">
+                    Launch Goal (SMART)
+                  </label>
+                  <input
+                    type="text"
+                    id="launchGoal"
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-indigo-500 focus:outline-none transition-colors"
+                    placeholder="e.g., $25k revenue in 60 days"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-4 mb-5">
+                <div>
+                  <label htmlFor="riskTolerance" className="block text-sm font-semibold text-gray-700 mb-2">
+                    Risk Tolerance
+                  </label>
+                  <select
+                    id="riskTolerance"
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-indigo-500 focus:outline-none transition-colors"
+                    required
+                  >
+                    <option value="">Select...</option>
+                    <option value="low">Low - Conservative approach</option>
+                    <option value="medium">Medium - Balanced approach</option>
+                    <option value="high">High - Aggressive approach</option>
+                  </select>
+                </div>
+                <div>
+                  <label htmlFor="launchWindow" className="block text-sm font-semibold text-gray-700 mb-2">
+                    Launch Window
+                  </label>
+                  <input
+                    type="text"
+                    id="launchWindow"
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-indigo-500 focus:outline-none transition-colors"
+                    placeholder="e.g., Q1 2024 or ASAP"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div className="mb-5">
+                <label htmlFor="creatorSkills" className="block text-sm font-semibold text-gray-700 mb-2">
+                  Skills & Resources
+                </label>
+                <textarea
+                  id="creatorSkills"
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-indigo-500 focus:outline-none transition-colors resize-none h-20"
+                  placeholder="Team size, tech stack, budget, follower count, email list..."
+                  required
+                ></textarea>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-4 mb-6">
+                <div>
+                  <label htmlFor="existingAssets" className="block text-sm font-semibold text-gray-700 mb-2">
+                    Existing Assets
+                  </label>
+                  <input
+                    type="text"
+                    id="existingAssets"
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-indigo-500 focus:outline-none transition-colors"
+                    placeholder="Docs, videos, designs, etc."
+                  />
+                </div>
+                <div>
+                  <label htmlFor="constraints" className="block text-sm font-semibold text-gray-700 mb-2">
+                    Key Constraints
+                  </label>
+                  <input
+                    type="text"
+                    id="constraints"
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-indigo-500 focus:outline-none transition-colors"
+                    placeholder="No paid ads, GDPR compliance, etc."
+                  />
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-gradient-to-r from-pink-500 to-rose-500 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 active:translate-y-0"
+              >
+                Generate Launch Strategy
+              </button>
+            </form>
+
+            <div className="mt-8 pt-6 border-t border-gray-200 text-center text-sm text-gray-600">
+              <p>
+                MCP Protocol endpoint: <code className="bg-gray-100 px-2 py-1 rounded text-xs">/mcp</code>
+                <br />
+                Integrate with Cursor, Claude Desktop, or any MCP-compatible tool
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }

@@ -1,7 +1,8 @@
 {
-  "name": "agent-engineering-bootcamp-mcp",
-  "version": "0.1.0",
+  "name": "launch-pilot-ai-consultant",
+  "version": "1.0.0",
   "private": true,
+  "description": "LaunchPilot - AI Launch Consultant that turns ideas into revenue-generating products and courses",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,7 +10,7 @@
     "setup": "./scripts/setup.sh",
     "test:sse": "node scripts/test-client.mjs http://localhost:3000",
     "test:http": "node scripts/test-streamable-http-client.mjs http://localhost:3000",
-    "test:bootcamp": "node scripts/test-bootcamp-tool.mjs http://localhost:3000",
+    "test:launchpilot": "node scripts/test-launchpilot-tool.mjs http://localhost:3000",
     "generate:cursor-link": "node scripts/generate-cursor-deeplink.mjs"
   },
   "dependencies": {

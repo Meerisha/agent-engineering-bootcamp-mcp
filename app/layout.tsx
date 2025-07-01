@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "MCP Server for Agent Engineering bootcamp",
-  description: "For our students to get personalized onboarding",
+  title: "LaunchPilot - AI Launch Consultant",
+  description: "Transform your raw idea into a revenue-generating product or course with AI-powered launch consulting",
 };
 
 export default function RootLayout({
@@ -10,7 +10,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <head>
+        <script src="https://cdn.tailwindcss.com"></script>
+      </head>
+      <body className="font-sans antialiased">{children}</body>
     </html>
   );
 }
